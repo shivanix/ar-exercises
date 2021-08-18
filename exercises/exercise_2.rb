@@ -15,4 +15,9 @@ puts "First store: #{@store1}"
 puts "Second store: #{@store2}"
 
 #Update the first store (@store1) instance in the database. (Change its name or something.)
-"Original name of store1 is #{@store1.name}"
+puts "Original name of store1 is #{@store1.name}"
+
+@store1.name = 'Burnaseae'
+@store1.save
+
+puts "Changed name of store1 is #{@store1.name}"
