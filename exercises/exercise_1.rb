@@ -13,21 +13,21 @@ puts "----------"
 
 
 burnaby = Store.create(
-  name: 'burnaby',
+  name: 'Burnaby',
   annual_revenue: '300000',
   mens_apparel: TRUE,
   womens_apparel: TRUE
 )
 
 richmond = Store.create(
-  name: 'richmond',
+  name: 'Richmond',
   annual_revenue: '1260000',
   mens_apparel: TRUE,
   womens_apparel: TRUE
 )
 
 gastown = Store.create(
-  name: 'gastown',
+  name: 'Gastown',
   annual_revenue: '190000',
   mens_apparel: TRUE,
   womens_apparel: TRUE
