@@ -17,7 +17,11 @@ puts "Second store: #{@store2}"
 #Update the first store (@store1) instance in the database. (Change its name or something.)
 puts "Original name of store1 is #{@store1.name}"
 
-@store1.name = 'Burnaseae'
-@store1.save
+# @store1.name = 'Burnaseae'
+# @store1.save
+
+
+#you can also use the below to update
+#  @store1.update(name: 'Bu')
 
 puts "Changed name of store1 is #{@store1.name}"
