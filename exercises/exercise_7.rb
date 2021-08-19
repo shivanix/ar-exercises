@@ -52,7 +52,7 @@ puts "----------"
 # end
 
 # Ask the user for a store name (store it in a variable)
-puts "ENTER A NAME"
+puts "Enter a store name......."
 @name = gets.chomp
 
 # Attempt to create a store with the inputted name but leave out the other fields (annual_revenue, mens_apparel, and womens_apparel)
@@ -62,6 +62,9 @@ wrong_store = Store.create(
   # mens_apparel: , 
   # womens_apparel: 
 )
-puts wrong_store.valid?
+# puts wrong_store.valid?
 # Display the error messages provided back from ActiveRecord to the user (one on each line) after you attempt to save/create the record
-puts wrong_store.errors.full_messages
+puts "\nerrors:\n"
+
+# wrong_store.errors.messages.each { |err, msg| puts "#{err}: #{msg}" }
+ puts "Printingggggggg #{wrong_store.errors.full_messages}"
