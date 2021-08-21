@@ -17,7 +17,7 @@ puts "----------"
 #id, store_id, first_name, last_name, hourly_rate, created_at, updated_at
 
 # Let's tell Active Record that these two tables are in fact related via the store_id column.
-# 
+ 
 # Add the following code directly inside the Store model (class): has_many :employees 
 
 # Add the following code directly inside the Employee model (class): belongs_to :store
@@ -27,15 +27,17 @@ puts "----------"
 # Go ahead and create some more employees using the create method. 
 # You can do this by making multiple calls to create (like you have before.) 
 # No need to assign the employees to variables though. 
+
 # Create them through the @store# instance variables that you defined in previous exercises. 
 # Create a bunch under @store1 (Burnaby) and @store2 (Richmond). Eg: @store1.employees.create(...).
 
+@store1.employees.create(first_name: "Neid", last_name: "Mhail", hourly_rate: 520)
+@store1.employees.create(first_name: "John", last_name: "Doe", hourly_rate: 320)
+@store1.employees.create(first_name: "Spent", last_name: "Zing", hourly_rate: 150)
+@store1.employees.create(first_name: "Play", last_name: "Doh", hourly_rate: 50)
+@store1.employees.create(first_name: "Regina", last_name: "Phillange", hourly_rate: 60)
 
-@store1.employees.create(first_name: "Khurram", last_name: "Virani", hourly_rate: 50)
-@store1.employees.create(first_name: "John", last_name: "Doe", hourly_rate: 50)
-@store2.employees.create(first_name: "Jane", last_name: "Dee", hourly_rate: 50)
-@store2.employees.create(first_name: "Jean", last_name: "Boyle", hourly_rate: 60)
-
-# puts "Store 1 has #{@store1.employees.count} employees"
-# puts "Store 2 has #{@store2.employees.count} employees"
-# puts "Total number of employees at all stores: #{employees.count}"
+@store2.employees.create(first_name: "Closti", last_name: "Tetani", hourly_rate: 40)
+@store2.employees.create(first_name: "Robert", last_name: "Cook", hourly_rate: 70)
+@store2.employees.create(first_name: "Earl", last_name: "Gardner", hourly_rate: 110)
+@store2.employees.create(first_name: "Vinny", last_name: "Gambini", hourly_rate: 79)

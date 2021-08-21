@@ -10,10 +10,6 @@ puts "Exercise 7"
 puts "----------"
 
 
-# Ask the user for a store name (store it in a variable)
-
-# Attempt to create a store with the inputted name but leave out the other fields (annual_revenue, mens_apparel, and womens_apparel)
-
 # Display the error messages provided back from ActiveRecord to the user (one on each line) after you attempt to save/create the record
 # puts "Enter a store name:"
 # @store_name = gets.chomp
@@ -53,18 +49,25 @@ puts "----------"
 
 # Ask the user for a store name (store it in a variable)
 puts "Enter a store name......."
-@name = gets.chomp
+store_name = gets.chomp
 
 # Attempt to create a store with the inputted name but leave out the other fields (annual_revenue, mens_apparel, and womens_apparel)
-wrong_store = Store.create(
-  name: @name,
+new_store = Store.create(
+  name: store_name,
   # annual_revenue: , 
   # mens_apparel: , 
   # womens_apparel: 
 )
-# puts wrong_store.valid?
+
 # Display the error messages provided back from ActiveRecord to the user (one on each line) after you attempt to save/create the record
-puts "\nerrors:\n"
+if (!new_store.errors.any?) then
+  puts "Whoa that worked!"
+else
+  puts "Couldn't create store: '#{store_name}' because"
+  new_store.errors.each{ |error, message|
+    puts "#{error} #{message}"
+  }
+end
 
 # wrong_store.errors.messages.each { |err, msg| puts "#{err}: #{msg}" }
  puts "Printingggggggg #{wrong_store.errors.full_messages}"
